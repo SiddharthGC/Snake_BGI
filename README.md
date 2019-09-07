@@ -1,7 +1,7 @@
 # Snake_BGI
 Siddharth Chandrasekar, 2016
 
-A snake game program written using C++ using the WinBGI graphics.h library.
+A snake game program written in C++ using the WinBGI graphics.h library.
 
 This is probably one of the best WinBGI snake implementations you'll find online (Believe me, I've looked). I've implemented a concept called 
 double buffering to make the gameplay much smoother.
