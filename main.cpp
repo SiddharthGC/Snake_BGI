@@ -226,112 +226,112 @@ void game_screen()                                          //The most important
           delay(5000);
           break;
       }
-}
-closegraph(GameWindow);
-setcurrentwindow(MainWindow);
+   }
+   closegraph(GameWindow);
+   setcurrentwindow(MainWindow);
 }
 
 void howtoplay()                                            //The tutorial screen
 {
-setbkcolor(BLACK);
-    setfillstyle(SOLID_FILL,GREEN);
-    int maxx = getmaxx();
-    int maxy = getmaxy();
-    setcolor(GREEN);
-    rectangle(9,9,maxx-9,maxy-9);
-    setfillstyle(10,BLUE);
-    bar(10,10,maxx-10,maxy-10);
-    int mid_x = textwidth("INSTRUCTIONS");
-    int mid_y = textheight("INSTRUCTIONS");
-    outtextxy(maxx/2 - mid_x/2, maxy/2 - mid_y/2 - 250, "INSTRUCTIONS");
-    line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 200, maxx/2 - mid_x/2 + 370,maxy/2 - mid_y/2 - 200);
-    line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 201, maxx/2 - mid_x/2 + 370,maxy/2 - mid_y/2 - 201);
-    line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 199, maxx/2 - mid_x/2 + 370,maxy/2 - mid_y/2 - 199);
-    setfillstyle(SOLID_FILL,GREEN);
-    bar(20,20,120,60);
-    setbkcolor(GREEN);
-    setcolor(BLACK);
-    settextstyle(3,HORIZ_DIR,3);
-    outtextxy(41,28,"BACK");
-    setbkcolor(BLACK);
-    setcolor(WHITE);
-    settextstyle(3,HORIZ_DIR,WHITE);
-    outtextxy(140,220,"1. Use the up, down, left and right arrow keys");
-    outtextxy(180,255,"to move the snake.");
-    outtextxy(140,320,"2. Eat the fruits to increase your score and size.");
-    outtextxy(140,385,"3. Each fruit increases your score by 200 points.");
-    outtextxy(140,450,"4. Avoid collision with the walls and yourself,");
-    outtextxy(177,485,"as either one of these will end the game.");
-    outtextxy(maxx/2 - 120,590,"GOOD LUCK !");
-    while(1)
-    {
-    while(!ismouseclick(WM_LBUTTONDOWN))
-    {
-      delay(0);
-    }
-    getmouseclick(WM_LBUTTONDOWN,xpos,ypos);
-    if((xpos>20)&&(xpos<120)&&(ypos>20)&&(ypos<60))
-        break;
-         else
-    continue;
+	setbkcolor(BLACK);
+	setfillstyle(SOLID_FILL,GREEN);
+	int maxx = getmaxx();
+	int maxy = getmaxy();
+	setcolor(GREEN);
+	rectangle(9,9,maxx-9,maxy-9);
+	setfillstyle(10,BLUE);
+	bar(10,10,maxx-10,maxy-10);
+	int mid_x = textwidth("INSTRUCTIONS");
+	int mid_y = textheight("INSTRUCTIONS");
+	outtextxy(maxx/2 - mid_x/2, maxy/2 - mid_y/2 - 250, "INSTRUCTIONS");
+	line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 200, maxx/2 - mid_x/2 + 370,maxy/2 - mid_y/2 - 200);
+	line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 201, maxx/2 - mid_x/2 + 370,maxy/2 - mid_y/2 - 201);
+	line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 199, maxx/2 - mid_x/2 + 370,maxy/2 - mid_y/2 - 199);
+	setfillstyle(SOLID_FILL,GREEN);
+	bar(20,20,120,60);
+	setbkcolor(GREEN);
+	setcolor(BLACK);
+	settextstyle(3,HORIZ_DIR,3);
+	outtextxy(41,28,"BACK");
+	setbkcolor(BLACK);
+	setcolor(WHITE);
+	settextstyle(3,HORIZ_DIR,WHITE);
+	outtextxy(140,220,"1. Use the up, down, left and right arrow keys");
+	outtextxy(180,255,"to move the snake.");
+	outtextxy(140,320,"2. Eat the fruits to increase your score and size.");
+	outtextxy(140,385,"3. Each fruit increases your score by 200 points.");
+	outtextxy(140,450,"4. Avoid collision with the walls and yourself,");
+	outtextxy(177,485,"as either one of these will end the game.");
+	outtextxy(maxx/2 - 120,590,"GOOD LUCK !");
+	while(1)
+	{
+	while(!ismouseclick(WM_LBUTTONDOWN))
+	{
+		delay(0);
+	}
+	getmouseclick(WM_LBUTTONDOWN,xpos,ypos);
+	if((xpos>20)&&(xpos<120)&&(ypos>20)&&(ypos<60))
+		break;
+	else
+		continue;
 }
 }
 
 void credits_screen()                                       //End credits screen
 {
-                    initwindow(800,600,"CREDITS",0,0,false,true);
-                    int maxx = getmaxx();
-                    int maxy = getmaxy();
-                    settextstyle(2,HORIZ_DIR,10);
-                    setcolor(GREEN);
-                    rectangle(9,9,maxx-9,maxy-9);
-                    setfillstyle(10,BLUE);
-                    bar(10,10,maxx-10,maxy-10);
-                    int mid_x = textwidth("CREDITS");
-                    int mid_y = textheight("CREDITS");
-                    outtextxy(maxx/2 - mid_x/2, maxy/2 - mid_y/2 - 250, "CREDITS");
-                    line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 200, maxx/2 - mid_x/2 + 230,maxy/2 - mid_y/2 - 200);
-                    setcolor(WHITE);
-                    settextstyle(2,HORIZ_DIR,8);
-                    outtextxy(100,130,"CREATED BY :");
-                   outtextxy(100,200,"SIDDHARTH G.C ....................................................15Z348");
-                   settextstyle(2,HORIZ_DIR,9);
-                    setcolor(GREEN);
-                   mid_x = textwidth("DISCLAIMER");
-                    mid_y = textheight("DISCLAIMER");
-                   outtextxy(maxx/2 - mid_x/2 + 6, maxy/2 - mid_y/2 + 40, "DISCLAIMER");
-                   setcolor(WHITE);
-                    settextstyle(2,HORIZ_DIR,8);
-                   outtextxy(80,360,"This is merely a student project. I do not claim to own ");
-                    outtextxy(57,390,"the rights to the SNAKE game, and I'm pretty sure no one ");
-                    outtextxy(340,420,"really does.");
-                    outtextxy(290,490,"Thanks for playing");
-                    getch();
-                    closegraph();
+	initwindow(800,600,"CREDITS",0,0,false,true);
+	int maxx = getmaxx();
+	int maxy = getmaxy();
+	settextstyle(2,HORIZ_DIR,10);
+	setcolor(GREEN);
+	rectangle(9,9,maxx-9,maxy-9);
+	setfillstyle(10,BLUE);
+	bar(10,10,maxx-10,maxy-10);
+	int mid_x = textwidth("CREDITS");
+	int mid_y = textheight("CREDITS");
+	outtextxy(maxx/2 - mid_x/2, maxy/2 - mid_y/2 - 250, "CREDITS");
+	line(maxx/2 - mid_x/2 - 20, maxy/2 - mid_y/2 - 200, maxx/2 - mid_x/2 + 230,maxy/2 - mid_y/2 - 200);
+	setcolor(WHITE);
+	settextstyle(2,HORIZ_DIR,8);
+	outtextxy(100,130,"CREATED BY :");
+	outtextxy(100,200,"SIDDHARTH G.C ....................................................15Z348");
+	settextstyle(2,HORIZ_DIR,9);
+	setcolor(GREEN);
+	mid_x = textwidth("DISCLAIMER");
+	mid_y = textheight("DISCLAIMER");
+	outtextxy(maxx/2 - mid_x/2 + 6, maxy/2 - mid_y/2 + 40, "DISCLAIMER");
+	setcolor(WHITE);
+	settextstyle(2,HORIZ_DIR,8);
+	outtextxy(80,360,"This is merely a student project. I do not claim to own ");
+	outtextxy(57,390,"the rights to the SNAKE game, and I'm pretty sure no one ");
+	outtextxy(340,420,"really does.");
+	outtextxy(290,490,"Thanks for playing");
+	getch();
+	closegraph();
 }
 
 int main()                                                  //Main function
 {
-    MainWindow = initwindow(1024,768,"Snake",0,0,false,false);
-    intro_screen();
-    while(GameOver!=1)
-    {
-    int Choice = menu_screen();
-    switch(Choice)
-    {
-    case 1:
-        game_screen();
-        break;
-    case 2:
-        howtoplay();
-        break;
-    case 3:
-        GameOver=1;
-        closegraph(MainWindow);
-        credits_screen();
-        break;
-    }
-    }
-   printf("Siddharth G.C - 15Z348");
-   return 0;
+	MainWindow = initwindow(1024,768,"Snake",0,0,false,false);
+	intro_screen();
+	while(GameOver!=1)
+	{
+		int Choice = menu_screen();
+		switch(Choice)
+		{
+			case 1:
+			game_screen();
+			break;
+			case 2:
+			howtoplay();
+			break;
+			case 3:
+			GameOver=1;
+			closegraph(MainWindow);
+			credits_screen();
+			break;
+		}
+	}
+	printf("Siddharth G.C - 15Z348");
+	return 0;
 }
